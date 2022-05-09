@@ -10,7 +10,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "Domain\\Forum\\": "domain/Forum/src/"
+            "Domain\\Forum\\": "domain/Forum/src/",
+            "App\\": "infra/"
 
         }
     },
@@ -28,5 +29,8 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }
+    },
+    "require": {
+        "symfony/http-foundation": "^6.0"
     }
 }

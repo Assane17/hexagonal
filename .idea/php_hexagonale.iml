@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Test\" />
       <sourceFolder url="file://$MODULE_DIR$/domain/Forum/src" isTestSource="false" packagePrefix="Domain\Forum\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/string/Resources/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/http-foundation" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
