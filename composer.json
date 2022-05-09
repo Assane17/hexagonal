@@ -1,0 +1,32 @@
+{
+    "name": "mino/php_hexagonale",
+    "description": "hexagonale app example in php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Assane17",
+            "email": "a.dione@iatf.it"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Domain\\Forum\\": "domain/Forum/src/"
+
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.21",
+        "spatie/phpunit-watcher": "^1.23",
+        "symfony/var-dumper": "^6.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
