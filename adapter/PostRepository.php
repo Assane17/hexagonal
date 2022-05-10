@@ -7,7 +7,7 @@ use Domain\Forum\Entity\Post;
 use Domain\Forum\Interfaces\PostRepositoryInterface;
 use PDO;
 
-class PDOPostRepository extends DB implements PostRepositoryInterface
+class PostRepository extends DB implements PostRepositoryInterface
 {
 
     public function __construct()

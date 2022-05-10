@@ -1,6 +1,6 @@
 <?php
 
-use Adapter\PDOPostRepository;
+use Adapter\PostRepository;
 use Domain\Forum\UseCases\CreatePost;
 use Domain\Forum\Entity\Post;
 use function PHPUnit\Framework\assertEquals;
@@ -8,7 +8,7 @@ use function PHPUnit\Framework\assertInstanceOf;
 
 it('create a post', function () {
 
-      $repository = new PDOPostRepository();
+      $repository = new PostRepository();
       $usecase = new CreatePost($repository);
       $usecase->truncatePostTable('post');
       $post = $usecase->execute([

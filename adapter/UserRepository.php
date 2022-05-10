@@ -10,7 +10,7 @@ use PDOException;
 use Domain\Auth\Entity\User;
 
 
-class PDOUserRepository extends DB implements UserRepositoryInterface
+class UserRepository extends DB implements UserRepositoryInterface
 {
     protected ?PDO $pdn = null;
 

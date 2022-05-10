@@ -1,13 +1,13 @@
 <?php
 
-use Adapter\PDOUserRepository;
+use Adapter\UserRepository;
 use Domain\Auth\Entity\User;
 use Domain\Auth\UseCases\CreateUser;
 use function PHPUnit\Framework\assertInstanceOf;
 
 it( 'create a user', function () {
 
-      $repository = new PDOUserRepository();
+      $repository = new UserRepository();
       $usecase = new CreateUser($repository);
       $usecase->truncateUserTable('user');
       $post = $usecase->execute([
