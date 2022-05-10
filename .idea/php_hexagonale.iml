@@ -6,6 +6,8 @@
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Test\" />
       <sourceFolder url="file://$MODULE_DIR$/domain/Forum/src" isTestSource="false" packagePrefix="Domain\Forum\" />
       <sourceFolder url="file://$MODULE_DIR$/infra" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/adapter" isTestSource="false" packagePrefix="Adapter\" />
+      <sourceFolder url="file://$MODULE_DIR$/domain/Auth/src" isTestSource="false" packagePrefix="Domain\Auth\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/string/Resources/bin" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/http-foundation" />
     </content>

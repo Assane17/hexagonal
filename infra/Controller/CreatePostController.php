@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 use DateTime;
-use Domain\Forum\Actions\CreatePost;
+use Domain\Forum\UseCases\CreatePost;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -18,7 +18,7 @@ class CreatePostController
         $this->createPost = $createPost;
     }
 
-    public function handleRequest(Request $request)
+    public function handleRequest(Request $request): Response
     {
         if($request->isMethod('GET')){
             ob_start();

@@ -11,7 +11,9 @@
     "autoload": {
         "psr-4": {
             "Domain\\Forum\\": "domain/Forum/src/",
-            "App\\": "infra/"
+            "Domain\\Auth\\": "domain/Auth/src/",
+            "App\\": "infra/",
+            "Adapter\\": "adapter/"
 
         }
     },
@@ -31,6 +33,7 @@
         }
     },
     "require": {
-        "symfony/http-foundation": "^6.0"
+        "symfony/http-foundation": "^6.0",
+        "ext-pdo": "*"
     }
 }

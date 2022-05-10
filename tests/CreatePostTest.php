@@ -1,21 +1,22 @@
 <?php
 
-use Domain\Forum\Actions\CreatePost;
+use Adapter\PDOPostRepository;
+use Domain\Forum\UseCases\CreatePost;
 use Domain\Forum\Entity\Post;
-use Test\Adapters\InMemoryPostRepository;
 use function PHPUnit\Framework\assertEquals;
 use function PHPUnit\Framework\assertInstanceOf;
 
 it('create a post', function () {
 
-      $repository = new InMemoryPostRepository;
+      $repository = new PDOPostRepository();
       $usecase = new CreatePost($repository);
+      $usecase->truncatePostTable('post');
       $post = $usecase->execute([
            'titre'=>'le titre',
            'description'=>'la description',
-           'createdAt'=>new DateTime('2020-01-01 14:36:32'),
-           'published'=> true
+           'createdAt'=>new DateTime('2020-01-01 14:01:01'),
+           'published'=> 1
        ]);
-      assertInstanceOf(Post::class, $usecase);
-      assertEquals($post, $repository->findOne($post->uuid));
+      assertInstanceOf(Post::class, $post);
+      assertEquals($post, $repository->findOne($post->getUuid()));
 });

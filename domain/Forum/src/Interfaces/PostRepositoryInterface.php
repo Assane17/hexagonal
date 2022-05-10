@@ -9,4 +9,6 @@ interface PostRepositoryInterface
     public function save(Post $post);
 
     public function findOne(string $uuid): ?Post;
+
+    public function truncateTable(string $tableName);
 }

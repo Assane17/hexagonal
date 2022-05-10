@@ -1,6 +1,6 @@
 <?php
 
-namespace Domain\Forum\Actions;
+namespace Domain\Forum\UseCases;
 
 use Domain\Forum\Entity\Post;
 use Domain\Forum\Interfaces\PostRepositoryInterface;
@@ -9,6 +9,7 @@ class CreatePost
 {
 
     protected PostRepositoryInterface $postRepository;
+
     public function __construct(PostRepositoryInterface $repository)
     {
         $this->postRepository = $repository;
@@ -19,11 +20,15 @@ class CreatePost
         $post= new Post(
             $postData['titre'],
             $postData['description'],
-            null,
+            $postData['published'],
             $postData['createdAt'],
-            $postData['published']
+            null
         );
         $this->postRepository->save($post);
         return $post;
+    }
+    public function truncatePostTable(string $tableName)
+    {
+        $this->postRepository->truncateTable($tableName);
     }
 }
