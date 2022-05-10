@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 use DateTime;
+use Domain\Auth\UseCases\CreateUser;
 use Domain\Forum\UseCases\CreatePost;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -33,6 +34,8 @@ class CreatePostController
           'published' => (int)$request->request->get('published') == 1,
       ]);
 
-        return new Response("<h1>{$post->titre}</h1>");
+        return new Response("<h1>{$post->getTitre()}</h1>");
     }
+
+
 }
